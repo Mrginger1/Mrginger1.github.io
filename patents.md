@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Patent
-permalink: /patent/
+title: Patents
+permalink: /patents/
 ---
 **基于元学习及深度学习的少样本社交媒体谣言检测方法**. [CN113377959B]
 

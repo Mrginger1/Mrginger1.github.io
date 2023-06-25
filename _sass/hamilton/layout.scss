@@ -128,7 +128,9 @@
   }
 
   .current-page {
-    text-decoration: line-through;
+    /*text-decoration: underline;*/
+    color:#6F2011;
+    font-weight: bold;
   }
 
   @media screen and (min-width: $on-medium) {

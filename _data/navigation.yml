@@ -1,16 +1,14 @@
 - title: About
-  url: /about/
-- title: Years
-  url: /years/
-- title: Resources
-  url: /resources/
+  url: /
+- title: Publications
+  url: /publications/
+- title: Projects
+  url: /projects/
+- title: Teaching
+  url: /teaching/
 - title: More
   sublinks:
-    - title: Research work
-      url: /research_work/
-    - title: Patent
-      url: /patent/
     - title: Datasets
       url: /datasets/
-    - title: Teaching
-      url: /teaching/
+    - title: Patents
+      url: /patents/
