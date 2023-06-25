@@ -2,13 +2,15 @@
   url: /about/
 - title: Years
   url: /years/
-- title: Categories
-  url: /categories/
-- title: Tags
-  url: /tags/
+- title: Resources
+  url: /resources/
 - title: More
   sublinks:
-    - title: FAQ
-      url: /faq/
-    - title: Docs
-      url: /docs/
+    - title: Research work
+      url: /research_work/
+    - title: Patent
+      url: /patent/
+    - title: Datasets
+      url: /datasets/
+    - title: Teaching
+      url: /teaching/

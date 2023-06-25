@@ -31,14 +31,7 @@
     {%- endif %}
   </ul>
 </div>
-
-{% if site.subscribe != false -%}
-<div class="sidebar-section feed-subscribe">
-  <a href="{{ 'feed.xml' | relative_url }}">
-    <i class="sidebar-icon fas fa-rss"></i><span>Subscribe</span>
-  </a>
-</div>
-{%- endif %}
+	
 
 {% if site.data.social -%}
   <div class="sidebar-section">
@@ -47,6 +40,11 @@
         <li>
           <a class="social-icon" href="{{ social.url }}"><i class="{{ social.icon | default: 'fas fa-link' }} fa-2x" title="{{ social.title }}"></i></a>
         </li>
+        <li>
+	        <a href="https://www.scholat.com/fanchenyou">
+  				<img src="/scholat.png" style="margin-top: -15px;" width="30" height="32">
+			</a>
+	    </li>
       {%- endfor %}
     </ul>
   </div>
