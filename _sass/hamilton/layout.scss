@@ -50,6 +50,13 @@
     float: center;
   }
 }
+.Fancy-AI-Lab{
+  @include relative-font-size(1.625);
+  font-family: $handwriting-font-family;
+  letter-spacing: 2px;
+  font-size: 300%;
+  margin-bottom: 0;
+}
 
 .site-nav {
   position: absolute;
