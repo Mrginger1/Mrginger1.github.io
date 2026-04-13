@@ -1,5 +1,5 @@
 .page-teams {
-  background: linear-gradient(180deg, #f9f5ee 0%, #fffdfa 100%);
+  background: linear-gradient(180deg, #fbf5f3 0%, #fffaf8 100%);
 
   .team-hero {
     padding: 72px 0 20px;
@@ -25,14 +25,14 @@
     margin-bottom: 22px;
 
     h2 {
-      color: #102c57;
+      color: #800000;
       margin-bottom: 0;
     }
   }
 
   .team-group-kicker {
     margin-bottom: 8px;
-    color: #9a3412;
+    color: #8f3b2f;
     text-transform: uppercase;
     letter-spacing: 0.18em;
     font-size: 12px;
@@ -47,9 +47,9 @@
     height: 100%;
     padding: 22px;
     border-radius: 22px;
-    background: rgba(255, 255, 255, 0.86);
-    border: 1px solid rgba(16, 44, 87, 0.08);
-    box-shadow: 0 18px 34px rgba(16, 44, 87, 0.07);
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(128, 0, 0, 0.08);
+    box-shadow: 0 18px 34px rgba(128, 0, 0, 0.07);
 
     .team-image {
       height: 72px;
@@ -75,7 +75,7 @@
       }
 
       a {
-        color: #102c57;
+        color: #800000;
         text-decoration: none;
 
         &:hover {
@@ -85,7 +85,7 @@
 
       p {
         margin: 0;
-        color: #9a3412;
+        color: #8f3b2f;
         text-transform: uppercase;
         letter-spacing: 0.08em;
         font-size: 12px;
@@ -96,7 +96,7 @@
     .team-content {
       flex: 1 0 100%;
       margin-top: 4px;
-      color: #52606d;
+      color: #6c5a5a;
     }
   }
 
@@ -117,7 +117,7 @@
   .team-note {
     display: inline-block;
     margin-top: 10px;
-    color: #52606d;
+    color: #6c5a5a;
     line-height: 1.5;
   }
 }

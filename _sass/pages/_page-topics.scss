@@ -12,8 +12,8 @@
   .topic-anchor-card {
     padding: 24px;
     border-radius: 20px;
-    background: #fffaf2;
-    border: 1px solid rgba(16, 44, 87, 0.08);
+    background: #fcf5f2;
+    border: 1px solid rgba(128, 0, 0, 0.08);
     scroll-margin-top: 110px;
 
     h2 {
@@ -21,7 +21,7 @@
     }
 
     a {
-      color: #102c57;
+      color: #800000;
       text-decoration: none;
 
       &:hover {
@@ -36,7 +36,7 @@
 
   .topic-anchor-tag,
   .topic-page-summary {
-    color: #52606d;
+    color: #6c5a5a;
   }
 
   .topic-anchor-tag {
@@ -44,8 +44,8 @@
     margin-bottom: 12px;
     padding: 6px 10px;
     border-radius: 999px;
-    background: #fff2cc;
-    color: #9a3412;
+    background: #f3e4c5;
+    color: #800000;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -56,5 +56,107 @@
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 24px;
+  }
+
+  .gallery-page-intro {
+    margin-bottom: 28px;
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+  }
+
+  .gallery-featured-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .gallery-feature-card {
+    position: relative;
+    margin: 0;
+    min-height: 280px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 18px 34px rgba(128, 0, 0, 0.1);
+
+    &.large {
+      grid-row: span 2;
+      min-height: 578px;
+
+      @include media-breakpoint-down(md) {
+        min-height: 320px;
+      }
+    }
+
+    &.tall {
+      min-height: 280px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(92, 0, 0, 0.08), rgba(92, 0, 0, 0.74));
+    }
+
+    figcaption {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1;
+      color: #fff;
+
+      span {
+        display: inline-block;
+        margin-bottom: 8px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        color: #f1d6a6;
+      }
+
+      strong {
+        display: block;
+        font-size: 22px;
+        line-height: 1.45;
+      }
+    }
+  }
+
+  .gallery-masonry-grid {
+    columns: 3 220px;
+    column-gap: 18px;
+    margin-top: 22px;
+  }
+
+  .gallery-tile {
+    break-inside: avoid;
+    margin: 0 0 18px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fcf5f2;
+    box-shadow: 0 14px 28px rgba(128, 0, 0, 0.08);
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
 }

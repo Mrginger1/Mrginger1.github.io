@@ -1,16 +1,17 @@
 baseurl: '/'
 permalink: pretty
-title: 'Intelligent Systems Lab'
+title: 'FancyAI Lab'
 
 description: 'Academic group website built with Jekyll Serif.'
 
 logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "32px"
-  mobile_width: "32px"
-  desktop: "images/logo/logo.svg"
-  desktop_height: "32px"
-  desktop_width: "120px"
+  mobile: "images/logo/1.png"
+  mobile_height: "38px"
+  mobile_width: "38px"
+  desktop: "images/logo/1.png"
+  desktop_height: "48px"
+  desktop_width: "160px"
+  favicon: "images/logo/2.png"
 
 home:
   featured_topics_limit: 4

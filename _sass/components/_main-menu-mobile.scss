@@ -14,7 +14,7 @@
   align-items: center;
   flex-direction: column;
   &.open {
-    opacity: 0.9;
+    opacity: 0.94;
     visibility: visible;
     height: 100%;
     z-index: 20;
@@ -58,7 +58,7 @@
         text-decoration: none;
         overflow: hidden;
         &:hover {
-          opacity: 0.8;
+          opacity: 0.82;
         }
       }
     }

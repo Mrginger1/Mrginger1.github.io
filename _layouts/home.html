@@ -9,7 +9,7 @@ bodyClass: "page-home"
       <div class="row align-items-center g-5">
         <div class="col-12 col-lg-6">
           <div class="hero-copy">
-            <p class="hero-kicker">Intelligent Systems Lab</p>
+            <p class="hero-kicker">FancyAI Lab</p>
             {{ content }}
             <div class="hero-actions">
               <a class="button button-primary" href="{{ '/team/' | relative_url }}">Meet the Team</a>
@@ -35,21 +35,21 @@ bodyClass: "page-home"
   <section class="home-carousel" aria-label="Campus photos carousel">
     <div class="home-carousel-track">
       <article class="home-slide active">
-        <img src="{{ '/images/thom-holmes-Lrfw0U_o9I0-unsplash.jpg' | relative_url }}" alt="Campus building and outdoor academic environment" />
+        <img src="{{ '/images/1686104359209136.jpg' | relative_url }}" alt="Campus building and outdoor academic environment" />
         <div class="home-slide-caption">
           <span>Campus View</span>
           <strong>Open spaces that encourage interdisciplinary exchange.</strong>
         </div>
       </article>
       <article class="home-slide">
-        <img src="{{ '/images/austin-distel-nGc5RT2HmF0-unsplash.jpg' | relative_url }}" alt="Collaborative research discussion setting" />
+        <img src="{{ '/images/1686104359209136.jpg' | relative_url }}" alt="Collaborative research discussion setting" />
         <div class="home-slide-caption">
           <span>Research Culture</span>
           <strong>Weekly discussions connect ideas across vision, language, and agents.</strong>
         </div>
       </article>
       <article class="home-slide">
-        <img src="{{ '/images/team/sung-wang-g4DgCF90EM4-unsplash.jpg' | relative_url }}" alt="Academic team portrait style image" />
+        <img src="{{ '/images/1686104359209136.jpg' | relative_url }}" alt="Academic team portrait style image" />
         <div class="home-slide-caption">
           <span>Lab Community</span>
           <strong>Students and collaborators grow together through ambitious projects.</strong>
@@ -71,7 +71,7 @@ bodyClass: "page-home"
 <div class="container topic-overview-section">
   <div class="section-heading">
     <p class="section-label">Research Areas</p>
-    <h2>Four topics that define the lab’s research map.</h2>
+    <h2>Core directions currently pursued in FancyAI Lab.</h2>
   </div>
   <div class="row g-4">
     {% assign featured_topics = site.topics | sort: 'weight' | slice: 0, site.home.featured_topics_limit %}
@@ -90,8 +90,8 @@ bodyClass: "page-home"
 <div class="topic-jump-strip">
   <div class="container">
     <div class="section-heading compact light">
-      <p class="section-label">Explore Topics</p>
-      <h2>Jump directly to each research area page.</h2>
+      <p class="section-label">Quick Navigation</p>
+      <h2>Shortcuts to the topic anchors on the overview page.</h2>
     </div>
     <div class="topic-jump-grid">
       {% assign topic_links = site.topics | sort: 'weight' %}
