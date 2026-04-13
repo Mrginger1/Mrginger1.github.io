@@ -1,14 +1,13 @@
 ---
-title: "Sage Kirk"
-date: 2018-11-19T10:47:58+10:00
+title: "Dr. Zhang Jin"
+date: 2026-04-13T10:47:58+08:00
 image: "images/team/sage-kirk-485982-unsplash.jpg"
-jobtitle: "Accounting Partner"
-linkedinurl: "https://www.linkedin.com/example2"
-promoted: true
+jobtitle: "Co-Principal Investigator"
+personal_url: "https://jinzhang-sustech.github.io/lab/member/"
+group: "leadership"
+research_focus: "Natural language processing, large models, and embodied agents"
+summary: "Co-leading the lab with interests in language intelligence, agent collaboration, and scalable foundation models."
 weight: 2
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-<!--more-->
-
-sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed. Tortor at risus viverra adipiscing at in.
+Dr. Zhang Jin co-leads the group and focuses on language-centered intelligence, multimodal understanding, and interactive AI systems.

@@ -3,67 +3,101 @@ layout: default
 bodyClass: "page-home"
 ---
 
-<div class="intro">
+<div class="hero-panel">
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
-        {{ content }}
-        {% if page.show_call_box %}
-          {% include call.html show_button=true %}
-        {% endif %}
-      </div>
-      {% if page.intro_image %}
-      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
-        <img alt="{{ page.title }}" class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relURL }}" />
-      </div>
-      {% endif %}
-    </div>
-  </div>
-</div>
-
-<div class="strip">
-  <div class="container pt-6 pb-6 pb-md-10">
-    <div class="row justify-content-start">
-      {% assign limit = site.home.limit_services | default: 6 %}
-      {% for service in site.services limit: limit %}
-      <div class="col-12 col-md-4 mb-1">
-        <div class="service service-summary">
-          <div class="service-content">
-            <h2 class="service-title">
-              <a href="{{ service.url | relative_url }}">{{ service.title }}</a>
-            </h2>
-            <p>{{ service.excerpt | markdownify | strip_html | truncate: 100 }}</p>
+    <div class="hero-shell">
+      <div class="row align-items-center g-5">
+        <div class="col-12 col-lg-6">
+          <div class="hero-copy">
+            <p class="hero-kicker">Intelligent Systems Lab</p>
+            {{ content }}
+            <div class="hero-actions">
+              <a class="button button-primary" href="{{ '/team/' | relative_url }}">Meet the Team</a>
+              <a class="button button-secondary" href="{{ '/publication/' | relative_url }}">Recent Publications</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-6">
+          <div class="hero-highlight">
+            <div class="hero-highlight-card">
+              <span class="hero-highlight-label">Focus</span>
+              <h2>Computer vision, language intelligence, multi-agent collaboration, and large models.</h2>
+              <p>We build reliable AI systems for scientific discovery, embodied decision making, and real-world deployment.</p>
+            </div>
           </div>
         </div>
       </div>
-      {% endfor %}
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-auto">
-        <a class="button button-primary" href="{{ "services" | relative_url }}">View All Services</a>
-      </div>
     </div>
   </div>
 </div>
 
-{% if site.data.features %}
-<div class="strip strip-grey">
-  <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-center">
-
-      {% for feature in site.data.features %}
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
-        <div class="feature">
-          {% if feature.image %}
-          <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image.url | relative_url }}" width="{{ feature.image.width }}" height="{{ feature.image.height }}" /></div>
-          {% endif %}
-          <h2 class="feature-title">{{ feature.title }}</h2>
-          <div class="feature-content">{{ feature.description }}</div>
+<div class="container home-carousel-wrap">
+  <section class="home-carousel" aria-label="Campus photos carousel">
+    <div class="home-carousel-track">
+      <article class="home-slide active">
+        <img src="{{ '/images/thom-holmes-Lrfw0U_o9I0-unsplash.jpg' | relative_url }}" alt="Campus building and outdoor academic environment" />
+        <div class="home-slide-caption">
+          <span>Campus View</span>
+          <strong>Open spaces that encourage interdisciplinary exchange.</strong>
         </div>
+      </article>
+      <article class="home-slide">
+        <img src="{{ '/images/austin-distel-nGc5RT2HmF0-unsplash.jpg' | relative_url }}" alt="Collaborative research discussion setting" />
+        <div class="home-slide-caption">
+          <span>Research Culture</span>
+          <strong>Weekly discussions connect ideas across vision, language, and agents.</strong>
+        </div>
+      </article>
+      <article class="home-slide">
+        <img src="{{ '/images/team/sung-wang-g4DgCF90EM4-unsplash.jpg' | relative_url }}" alt="Academic team portrait style image" />
+        <div class="home-slide-caption">
+          <span>Lab Community</span>
+          <strong>Students and collaborators grow together through ambitious projects.</strong>
+        </div>
+      </article>
+    </div>
+    <div class="home-carousel-controls">
+      <button class="home-carousel-btn prev" type="button" aria-label="Previous slide">‹</button>
+      <div class="home-carousel-dots" aria-label="Carousel navigation">
+        <button class="dot active" type="button" aria-label="Go to slide 1"></button>
+        <button class="dot" type="button" aria-label="Go to slide 2"></button>
+        <button class="dot" type="button" aria-label="Go to slide 3"></button>
       </div>
-      {% endfor %}
+      <button class="home-carousel-btn next" type="button" aria-label="Next slide">›</button>
+    </div>
+  </section>
+</div>
 
+<div class="container topic-overview-section">
+  <div class="section-heading">
+    <p class="section-label">Research Areas</p>
+    <h2>Four topics that define the lab’s research map.</h2>
+  </div>
+  <div class="row g-4">
+    {% assign featured_topics = site.topics | sort: 'weight' | slice: 0, site.home.featured_topics_limit %}
+    {% for topic in featured_topics %}
+    <div class="col-12 col-md-6">
+      <a class="topic-card" href="{{ topic.url | relative_url }}">
+        <span class="topic-card-tag">{{ topic.short_name }}</span>
+        <h3>{{ topic.title }}</h3>
+        <p>{{ topic.summary }}</p>
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="topic-jump-strip">
+  <div class="container">
+    <div class="section-heading compact light">
+      <p class="section-label">Explore Topics</p>
+      <h2>Jump directly to each research area page.</h2>
+    </div>
+    <div class="topic-jump-grid">
+      {% assign topic_links = site.topics | sort: 'weight' %}
+      {% for topic in topic_links %}
+      <a class="topic-jump-link" href="{{ '/topics/' | relative_url }}#{{ topic.slug }}">{{ topic.short_name }}</a>
+      {% endfor %}
     </div>
   </div>
 </div>
-{% endif %}

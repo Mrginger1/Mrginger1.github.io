@@ -1,6 +1,8 @@
 baseurl: '/'
 permalink: pretty
-title: 'Jekyll Serif'
+title: 'Intelligent Systems Lab'
+
+description: 'Academic group website built with Jekyll Serif.'
 
 logo:
   mobile: "images/logo/logo-mobile.svg"
@@ -10,8 +12,8 @@ logo:
   desktop_height: "32px"
   desktop_width: "120px"
 
-home: 
-  limit_services: 6
+home:
+  featured_topics_limit: 4
 
 collections:
   services:
@@ -19,6 +21,9 @@ collections:
     sort_by: weight
   team:
     output: true
+  topics:
+    output: true
+    sort_by: weight
 
 defaults:
   - scope:
@@ -31,6 +36,11 @@ defaults:
       type: "team"
     values:
       layout: "team"
+  - scope:
+      path: ""
+      type: "topics"
+    values:
+      layout: "topic"
 
 sass:
   style: compressed # possible values: nested expanded compact compressed

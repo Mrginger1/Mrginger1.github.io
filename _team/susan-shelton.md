@@ -1,9 +1,12 @@
 ---
-title: "Susan Shelton"
-date: 2018-12-20T13:45:06+10:00
+title: "David He"
+date: 2026-04-13T13:45:06+08:00
 image: "images/team/cristian-newman-94319-unsplash.jpg"
-jobtitle: "Developer"
-weight: 5
+jobtitle: "Research Assistant"
+personal_url: "https://example.com/david"
+group: "current-members"
+research_focus: "Efficient model adaptation and multimodal systems"
+weight: 6
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed. Tortor at risus viverra adipiscing at in.
+David focuses on lightweight deployment strategies for foundation models.

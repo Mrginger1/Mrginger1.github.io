@@ -1,12 +1,10 @@
 ---
 title: Team
 layout: teams
-description: Team
+description: Lab members and alumni
 permalink: "/team/"
-intro_image_absolute: true
-intro_image_hide_on_mobile: false
 ---
 
-# Meet The Team
+# Meet the team behind the lab.
 
-Our team of qualified accountants and financial consultants can help your business at any stage of it's growth.
+From faculty leadership to current students and graduated alumni, our group brings together researchers working across machine intelligence.

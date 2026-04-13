@@ -1,13 +1,13 @@
 ---
-title: "Peter Van Eijk"
-date: 2018-11-19T10:47:58+10:00
+title: "Prof. Fan Chenyou"
+date: 2026-04-13T10:47:58+08:00
 image: "images/team/peter-van-eijk-711986-unsplash.jpg"
-jobtitle: "Director"
-linkedinurl: "https://www.linkedin.com/"
-promoted: true
+jobtitle: "Principal Investigator"
+personal_url: "https://fanchenyou.github.io/"
+group: "leadership"
+research_focus: "Computer vision, generative modeling, and multimodal learning"
+summary: "Leading the lab’s research agenda in visual intelligence, trustworthy learning systems, and interdisciplinary AI collaborations."
 weight: 1
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Professor Fan Chenyou leads the Intelligent Systems Lab and supervises projects on computer vision, multimodal reasoning, and robust learning systems.
