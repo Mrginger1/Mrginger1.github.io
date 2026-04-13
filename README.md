@@ -1,103 +1,648 @@
-# Jekyll Serif Theme
+# FancyAI Lab Website Guide
 
-Serif is a modern business theme for Jekyll. It contains multiple content types for a typical brochure/marketing website. The theme is fully responsive, blazing fast and artfully illustrated.
+这是 `FancyAI Lab` 的 Jekyll 站点说明文档，主要用于帮助后续维护者快速找到每个版块对应的文件，并按分区自定义内容。
 
-[Live Demo](https://jekyll-serif.netlify.app/) |
-[Zerostatic Themes](https://www.zerostatic.io)
+项目基于 Jekyll 构建，当前已经改造成实验室主页风格，包含以下主要页面：
 
-<a href="https://www.buymeacoffee.com/zerostatic" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+- `Home`
+- `Team`
+- `Publication`
+- `Topics`
+- `Gallery`
 
-![Jekyll Serif Theme screenshot](https://www.zerostatic.io/theme/jekyll-serif/jekyll-serif-screenshot.png)
+---
 
-### Theme features
+## 1. 项目目录总览
 
-- Jekyll 4.2+
-- Netlify & Github Pages ready
-- Services (Collection)
-- Team (Collection)
-- Features (Data)
-- SCSS
-- 100% Responsive design, animated hamburger and mobile slide in menu
-- Bootstrap 4.6 - _Only the bootstrap grid and utilites are imported by default. If you want to use more of the Boostrap library you can uncomment the `@import` in `style.scss`_
-- 100/100 Google Lighthouse speed score
-- 100/100 Google Lighthouse seo score
-- 100/100 Google Lighthouse accessibility score
-- 100/100 Google Lighthouse best practices score
-- Under 50KB without images or 80KB with images and illustrations ⚡
-- Under 20KB without Google fonts ⚡⚡⚡
-- Robust example content included
-- Royalty free illustrations included
+最常用的几个目录如下：
 
-## Installation
+- `_config.yml`：站点总配置
+- `_data/menus.yml`：顶部导航和底部导航
+- `_layouts/`：页面布局模板
+- `_team/`：团队成员数据
+- `_topics/`：研究方向数据
+- `index.md`：首页正文文案
+- `team.md`：团队页顶部介绍文案
+- `topics.md`：研究方向总览页文案
+- `publication.md`：论文页内容
+- `gallery.md`：团队合照/活动展示页内容
+- `images/`：图片资源
+- `_sass/`：页面样式和组件样式
+- `assets/css/style.scss`：全站主样式入口
+- `assets/js/scripts.js`：轮播等前端交互脚本
 
-### Installing Ruby & Jekyll
+---
 
-If this is your first time using Jekyll, please follow the [Jekyll docs](https://jekyllrb.com/docs/installation/) and make sure your local environment (including Ruby) is setup correctly.
+## 2. 本地运行方式
 
-### Installing Theme
+### 2.1 安装依赖
 
-Download or clone the theme.
+在项目根目录执行：
 
-To run the theme locally, navigate to the theme directory and run:
-
-```
+```bash
 bundle install
 ```
 
-To start the Jekyll local development server.
+### 2.2 本地预览
 
-```
-bundle exec jekyll serve
+Windows 下如果 Ruby 不在环境变量里，可用：
+
+```powershell
+$env:Path = "C:\Ruby33-x64\bin;" + $env:Path; bundle exec jekyll serve --host 127.0.0.1 --port 4000 --livereload
 ```
 
-To build the theme.
+启动后浏览器访问：
 
+```text
+http://127.0.0.1:4000
 ```
+
+### 2.3 构建静态文件
+
+```bash
 bundle exec jekyll build
 ```
 
-## Deployment
+生成结果在：
 
-### Netlify
+```text
+_site/
+```
 
-Use Netlify to deploy this theme. This theme contains a valid and tested `netlify.toml` - Feel free to use the 1-click deploy below.
+---
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/zerostaticthemes/jekyll-serif-theme)
+## 3. 站点基础信息如何修改
 
-### Github Pages
+站点整体信息主要在 `_config.yml` 中配置。
 
-This theme has been tested to work with Github Pages (and Github Project Pages). When using Github Pages you will need to update the `baseurl` in the `_config.yml` otherwise all the css, images and paths will be broken.
+你可以在这里修改：
 
-For example the site https://zerostaticthemes.github.io/jekyll-serif-theme would have `baseurl: "/jekyll-serif-theme/"`
+- 站点名称
+- logo 路径
+- favicon 路径
+- Topics 首页展示数量
 
-## Extras
+当前重点字段：
 
-### License
+- `title`：站点名称
+- `logo.desktop`：桌面端大 logo
+- `logo.mobile`：移动端 logo
+- `logo.favicon`：浏览器标签页图标
+- `home.featured_topics_limit`：首页展示多少个 topics
 
-- You cannot create ports of this theme
-- You cannot re-sell this theme
+如果替换 logo：
 
-### Credits
+1. 把新图片放到 `images/logo/`
+2. 更新 `_config.yml` 中对应路径
 
-- Beautiful royalty free Illustrations by Icons8 - https://icons8.com/illustrations/style--pixeltrue
-- Stock images by Unsplash - https://unsplash.com/
-- Feature icons by Noun Project - https://thenounproject.com/
+---
 
-## Support My Work
+## 4. 导航栏如何修改
 
-I've been building open source themes for all the main static site generators for over 4 years now. My premium themes allow me to continue to allocate time to maintain, improve and build new open source themes.
+导航栏在：
 
-1. Leave a star ⭐🙏🏻
-2. Make a contribution to this theme, add a feature, fix a bug, nothing is to small 
-2. Mention this theme on twitter [@zerostaticio](https://twitter.com/zerostaticio) 📢
-3. Purchase a premium theme 🔥
+```text
+_data/menus.yml
+```
 
-### All Jekyll Themes by Zerostatic
+分为两部分：
 
-- [Jekyll Serif (Open Source)](https://www.zerostatic.io/theme/jekyll-serif/)
-- [Jekyll Atlantic (Open Source)](https://www.zerostatic.io/theme/jekyll-atlantic/)
-- [Jekyll Advance (Premium)](https://www.zerostatic.io/theme/jekyll-advance/)
-- [Jekyll Origin (Premium)](https://www.zerostatic.io/theme/jekyll-origin/)
-- [Jekyll Curate (Premium)](https://www.zerostatic.io/theme/jekyll-curate/)
+- `main`：右上角主导航
+- `footer`：底部导航
 
-🇦🇺 **Made in Australia** by Robert Austin
+你可以修改每个条目的：
+
+- `name`：显示名称
+- `url`：页面链接
+- `weight`：排序，数字越小越靠前
+
+例如新增一个页面时：
+
+1. 先创建对应页面文件
+2. 再到 `_data/menus.yml` 中增加导航项
+
+---
+
+## 5. 首页 Home 如何修改
+
+首页相关文件主要有两个：
+
+- `index.md`：首页主文案
+- `_layouts/home.html`：首页结构
+
+### 5.1 修改首页主标题和简介
+
+编辑：
+
+```text
+index.md
+```
+
+这里控制：
+
+- 首页大标题
+- 首页简介文字
+
+### 5.2 修改首页轮播图
+
+编辑：
+
+```text
+_layouts/home.html
+```
+
+在轮播区域中，每一张图都包含：
+
+- `img src`：图片路径
+- `alt`：图片说明
+- `span`：小标题
+- `strong`：大标题说明
+
+如果要替换轮播图片：
+
+1. 把图片放入 `images/`
+2. 修改 `_layouts/home.html` 中轮播对应的 `src`
+
+### 5.3 修改轮播自动播放和切换逻辑
+
+编辑：
+
+```text
+assets/js/scripts.js
+```
+
+这里可以调整：
+
+- 自动播放间隔
+- 左右切换逻辑
+- 圆点切换逻辑
+
+### 5.4 修改首页 Research Areas 区块
+
+Research Areas 的内容来源于：
+
+```text
+_topics/
+```
+
+首页会自动读取 `_topics/` 中的条目并展示前几个卡片。
+
+每个 topic 文件都可以设置：
+
+- `title`
+- `short_name`
+- `slug`
+- `summary`
+- `weight`
+
+其中：
+
+- `weight` 决定排序
+- `summary` 会在首页和 topics 总览页显示
+
+### 5.5 修改首页样式
+
+首页样式在：
+
+```text
+_sass/pages/_page-home.scss
+```
+
+这里可以调：
+
+- hero 区背景
+- 轮播遮罩颜色和透明度
+- topics 卡片样式
+- 快速导航区样式
+
+---
+
+## 6. Team 页面如何修改
+
+团队页相关文件：
+
+- `team.md`：团队页顶部介绍文案
+- `_layouts/teams.html`：团队页结构
+- `_team/`：成员数据
+
+### 6.1 修改 Team 页顶部介绍
+
+编辑：
+
+```text
+team.md
+```
+
+可修改：
+
+- 页面标题
+- 页面简介
+
+### 6.2 修改成员信息
+
+每位成员对应 `_team/` 目录中的一个 Markdown 文件。
+
+常用字段包括：
+
+- `title`：姓名
+- `image`：头像路径
+- `jobtitle`：职位
+- `personal_url`：个人主页链接
+- `group`：成员分组
+- `research_focus`：研究方向
+- `summary`：简介
+- `current_position`：毕业去向（适合 alumni）
+- `weight`：排序
+
+### 6.3 成员分组规则
+
+当前 Team 页面分成三组，对应 `group` 字段：
+
+- `leadership`
+- `current-members`
+- `graduated-alumni`
+
+你只要把成员文件里的 `group` 改成这三个值之一，就会自动显示到对应板块。
+
+### 6.4 修改 Team 页面布局
+
+编辑：
+
+```text
+_layouts/teams.html
+```
+
+这里可以修改：
+
+- 三个分区的标题
+- 每个成员卡片的显示结构
+- 是否显示研究方向/毕业去向
+
+### 6.5 修改 Team 页面样式
+
+编辑：
+
+```text
+_sass/pages/_page-teams.scss
+```
+
+可调整：
+
+- 成员卡片背景
+- 卡片圆角与阴影
+- 字体颜色
+- 三个分组的间距
+
+---
+
+## 7. Topics 页面如何修改
+
+研究方向相关文件：
+
+- `topics.md`：topics 总览页
+- `_topics/`：每个 research area 的独立内容
+- `_layouts/topic.html`：topic 子页面布局
+
+### 7.1 修改 Topics 总览页说明
+
+编辑：
+
+```text
+topics.md
+```
+
+这里控制：
+
+- Topics 页顶部简介
+- 四个 research areas 的总览展示方式
+
+### 7.2 修改某个 research area
+
+例如：
+
+- `_topics/cv.md`
+- `_topics/nlp.md`
+- `_topics/multi-agent.md`
+- `_topics/llm.md`
+
+每个文件中可修改：
+
+- 标题
+- 简称
+- 摘要
+- 正文介绍
+- 顺序
+
+### 7.3 新增 research area
+
+步骤如下：
+
+1. 在 `_topics/` 下新增一个 `.md` 文件
+2. 补充 front matter，例如 `title`、`short_name`、`slug`、`summary`、`weight`
+3. 写正文内容
+4. 首页和 topics 页会自动读取它
+
+### 7.4 修改 Topics 页面样式
+
+编辑：
+
+```text
+_sass/pages/_page-topics.scss
+```
+
+这里同时也包含了 gallery 相关样式。
+
+---
+
+## 8. Publication 页面如何修改
+
+文件位置：
+
+```text
+publication.md
+```
+
+当前是一个占位页，你可以直接把真实论文内容写进去。
+
+推荐写法：
+
+- 按年份分组
+- 按会议/期刊分类
+- 加论文链接、代码链接、项目页链接
+
+例如可以写成：
+
+```markdown
+## 2025
+
+- Author, Author, **Paper Title**, Conference 2025
+- Author, Author, **Paper Title**, Journal 2025
+```
+
+如果后续论文很多，也可以考虑改成数据驱动结构，比如单独建立 `_data/publications.yml`。
+
+---
+
+## 9. Gallery 页面如何修改
+
+文件位置：
+
+- `gallery.md`：图片展示内容
+- `_sass/pages/_page-topics.scss`：gallery 样式
+
+### 9.1 替换 Gallery 图片
+
+当前 gallery 使用的是占位图片。要替换时：
+
+1. 先把真实团队合照或活动照片放入 `images/`
+2. 修改 `gallery.md` 中各个 `img src`
+3. 同时更新 `alt` 文本和下方说明文案
+
+### 9.2 当前 Gallery 结构
+
+现在页面包含：
+
+- 顶部介绍文字
+- 大图展示区
+- 两张说明型特色图
+- 下方瀑布流图片墙
+
+### 9.3 如果想做成更真实的实验室相册
+
+可以继续扩展为：
+
+- 按年份分类
+- 按活动分类
+- 点击图片放大
+- 使用更多不同尺寸图片
+
+---
+
+## 10. Logo、Favicon、图片资源如何管理
+
+### 10.1 Logo
+
+目录：
+
+```text
+images/logo/
+```
+
+当前约定：
+
+- `1.png`：大 logo
+- `2.png`：小 logo / favicon
+
+### 10.2 其他图片
+
+常用目录：
+
+- `images/`：通用图片
+- `images/team/`：成员头像
+- `images/logo/`：logo 与 favicon
+
+建议命名清晰一些，例如：
+
+- `group-photo-2026.jpg`
+- `seminar-visit-01.jpg`
+- `prof-zhang.jpg`
+
+---
+
+## 11. 配色和样式如何修改
+
+### 11.1 全站主色
+
+编辑：
+
+```text
+assets/css/style.scss
+```
+
+最重要的变量有：
+
+- `$primary`
+- `$primary-dark`
+- `$secondary`
+- `$black`
+- `$white-offset`
+- `$steel`
+
+这些变量会影响全站的大部分颜色。
+
+### 11.2 顶部导航样式
+
+编辑：
+
+- `_sass/components/_header.scss`
+- `_sass/components/_main-menu.scss`
+- `_sass/components/_main-menu-mobile.scss`
+
+### 11.3 按钮样式
+
+编辑：
+
+```text
+_sass/components/_buttons.scss
+```
+
+### 11.4 页脚样式
+
+编辑：
+
+```text
+_sass/components/_footer.scss
+```
+
+---
+
+## 12. 页面布局文件说明
+
+常用布局文件：
+
+- `_layouts/default.html`：全站基础布局
+- `_layouts/home.html`：首页布局
+- `_layouts/teams.html`：团队页布局
+- `_layouts/topic.html`：单个 topic 页面布局
+- `_layouts/page.html`：普通页面布局
+
+如果你想改页面结构，优先看对应 layout 文件；如果你只是想改文案，优先看 `.md` 页面文件。
+
+---
+
+## 13. 新增一个普通页面的方法
+
+例如想新增一个 `News` 页面：
+
+### 步骤 1：创建页面
+
+新建 `news.md`
+
+```markdown
+---
+title: News
+layout: page
+permalink: "/news/"
+---
+
+Here is the news content.
+```
+
+### 步骤 2：加入导航
+
+修改 `_data/menus.yml`，新增：
+
+```yml
+- name: "News"
+  url: "/news/"
+  weight: 6
+```
+
+---
+
+## 14. 常见修改入口速查
+
+### 修改站点名称
+
+- `_config.yml`
+
+### 修改顶部导航
+
+- `_data/menus.yml`
+
+### 修改首页文案
+
+- `index.md`
+
+### 修改首页轮播图
+
+- `_layouts/home.html`
+
+### 修改团队成员
+
+- `_team/*.md`
+
+### 修改 research areas
+
+- `_topics/*.md`
+
+### 修改 topics 总览页
+
+- `topics.md`
+
+### 修改 publication 页面
+
+- `publication.md`
+
+### 修改 gallery 页面
+
+- `gallery.md`
+
+### 修改 logo / favicon
+
+- `images/logo/`
+- `_config.yml`
+
+### 修改全站配色
+
+- `assets/css/style.scss`
+
+---
+
+## 15. 当前站点内容自定义建议
+
+如果后续要正式上线，建议优先替换以下内容：
+
+1. `Team` 页面中的占位成员信息
+2. `Publication` 页面中的占位论文内容
+3. `Gallery` 页面中的占位图片
+4. 首页轮播图中的占位图片
+5. Topics 页中的研究方向摘要和正文
+6. 页脚和社交链接信息
+
+---
+
+## 16. 维护建议
+
+- 图片尽量统一尺寸或统一裁切风格
+- 成员头像建议统一长宽比
+- topic 命名和 short name 尽量保持一致风格
+- 每次改完重要内容后执行一次：
+
+```bash
+bundle exec jekyll build
+```
+
+- 如果浏览器样式没有变化，先尝试强制刷新：
+
+```text
+Ctrl + F5
+```
+
+---
+
+## 17. 联系后续维护者时建议说明的内容
+
+如果将来把项目交给其他同学维护，建议一并说明：
+
+- Ruby 和 Jekyll 的本地运行方式
+- logo、轮播图、gallery 图片存放位置
+- `_team/` 与 `_topics/` 的数据组织规则
+- 哪些页面还是占位内容
+
+---
+
+## 18. 当前项目适合的后续扩展
+
+后面如果继续升级，可以考虑：
+
+- 增加 `News` 页面
+- 增加真实论文数据结构
+- 为 Gallery 增加点击放大
+- 为 Team 增加成员分类标签
+- 为 Topics 增加更多图文内容
+- 接入 Google Analytics 或其他统计工具
+
+---
+
+如需继续维护，建议优先从文案、成员、论文和图片四类内容开始替换，这样最快能把站点变成正式可用版本。

@@ -12,8 +12,8 @@
   .topic-anchor-card {
     padding: 24px;
     border-radius: 20px;
-    background: #fcf5f2;
-    border: 1px solid rgba(128, 0, 0, 0.08);
+    background: #fcf6f3;
+    border: 1px solid rgba(122, 15, 22, 0.08);
     scroll-margin-top: 110px;
 
     h2 {
@@ -21,7 +21,7 @@
     }
 
     a {
-      color: #800000;
+      color: #7a0f16;
       text-decoration: none;
 
       &:hover {
@@ -36,7 +36,7 @@
 
   .topic-anchor-tag,
   .topic-page-summary {
-    color: #6c5a5a;
+    color: #6a5959;
   }
 
   .topic-anchor-tag {
@@ -44,8 +44,8 @@
     margin-bottom: 12px;
     padding: 6px 10px;
     border-radius: 999px;
-    background: #f3e4c5;
-    color: #800000;
+    background: #f1e3c6;
+    color: #7a0f16;
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -85,7 +85,7 @@
     min-height: 280px;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 18px 34px rgba(128, 0, 0, 0.1);
+    box-shadow: 0 18px 34px rgba(122, 15, 22, 0.1);
 
     &.large {
       grid-row: span 2;
@@ -111,7 +111,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(92, 0, 0, 0.08), rgba(92, 0, 0, 0.74));
+      background: linear-gradient(180deg, rgba(79, 10, 15, 0.04), rgba(79, 10, 15, 0.46));
     }
 
     figcaption {
@@ -128,7 +128,7 @@
         font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 0.14em;
-        color: #f1d6a6;
+        color: #e7d3ab;
       }
 
       strong {
@@ -150,8 +150,8 @@
     margin: 0 0 18px;
     border-radius: 20px;
     overflow: hidden;
-    background: #fcf5f2;
-    box-shadow: 0 14px 28px rgba(128, 0, 0, 0.08);
+    background: #fcf6f3;
+    box-shadow: 0 14px 28px rgba(122, 15, 22, 0.08);
 
     img {
       width: 100%;
