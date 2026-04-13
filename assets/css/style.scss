@@ -2,13 +2,13 @@
 ---
 
 // Colors
-$primary: #e5261f;
-$primary-dark: #a01b16;
-$secondary: #f88379;
-$black: #2f2f41;
+$primary: #102c57;
+$primary-dark: #0d1b2a;
+$secondary: #f6ae2d;
+$black: #1b263b;
 $white: #ffffff;
-$white-offset: #fff6f8;
-$steel: #5c5a5a;
+$white-offset: #f2ede3;
+$steel: #52606d;
 
 // Links
 $link-color: $primary;
@@ -17,13 +17,13 @@ $link-hover-color: lighten($primary, 10%);
 $link-hover-decoration: underline;
 
 // Fonts
-$font-family-base: Helvetica, Arial, sans-serif, -apple-system;
-$font-family-heading: "Playfair Display", serif, -apple-system;
+$font-family-base: "Source Sans 3", Helvetica, Arial, sans-serif, -apple-system;
+$font-family-heading: "Cormorant Garamond", serif, -apple-system;
 
 // Footer
-$footer-background-color: $primary;
+$footer-background-color: $primary-dark;
 $footer-text-color: $white;
-$sub-footer-background-color: darken($primary, 10%);
+$sub-footer-background-color: darken($primary-dark, 4%);
 $sub-footer-text-color: $white;
 
 // Bootstrap 5.3.2
@@ -106,6 +106,7 @@ $sub-footer-text-color: $white;
 @import "pages/page-home";
 @import "pages/page-teams";
 @import "pages/page-service";
+@import "pages/page-topics";
 
 body {
   font-size: 16px;

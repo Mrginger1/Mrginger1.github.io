@@ -1,27 +1,31 @@
 .header {
   color: $primary;
-  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
-  border-bottom: 1px solid $white-offset;
-  padding: 10px 0px;
+  border-bottom: 1px solid rgba(16, 44, 87, 0.08);
+  padding: 14px 0;
+  position: sticky;
+  top: 0;
+  z-index: 30;
   .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
   }
   &.header-absolute {
-    position: absolute;
-    z-index: 10;
+    position: sticky;
+    z-index: 30;
     width: 100%;
   }
 }
 .lock-scroll {
   .header {
     &.header-absolute {
-      position: static;
+      position: sticky;
     }
   }
 }
